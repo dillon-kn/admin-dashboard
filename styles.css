@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #014421;
+    --secondary-color: #eadabc;
+    --tertiary-color: #fffff1;
+    --accent-color: #eada;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 9fr / 1fr 5fr;
+}
+
+.dashboard-container {
+    background-color: var(--primary-color);
+    grid-area: 1 / 1 / 3 / 1;
+    color: var(--tertiary-color);
+    padding: 15px;
+}
+
+.dashboard {
+    display: grid;
+    gap: 50px;
+    align-items: start;
+}
+
+.dashboard > div > div {
+    margin: 10px;
+}
+
+.header {
+    background-color: var(--tertiary-color);
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-flow: column;
+    padding: 10px 20px;
+    gap: 50px;
+}
+
+.search-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    align-content: center;
+    gap: 15px;
+}
+
+.search {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    width: clamp(150px, 450px, 700px);
+    height: clamp(15px, 25px, 30px);
+}
+
+.profile-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: right;
+    align-content: center;
+    gap: 15px;
+}
+
+#bell {
+    padding-top:2px;
+}
+
+.profile {
+    background-color: var(--secondary-color);
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+}
+
+.header-3 {
+    font-size: 1.1em;
+    padding-top: 1px;
+}
+
+.main-content {
+    background-color: var(--secondary-color);
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+}
+
+.project-container {
+    grid-area: 1 / 1 / -1 / span 1;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-items: space-evenly;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: -35px var(--accent-color);
+    background-color: var(--tertiary-color);
+    width: clamp(250px, 300px, 325px);
+    height: clamp(150px, 200px, 250px);
+    padding: 15px;
+    display:grid;
+    gap:8px;
+    place-self: stretch;
+}
+
+.announcement-container {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.logo {
+    font-size: 1.5em;
+}
